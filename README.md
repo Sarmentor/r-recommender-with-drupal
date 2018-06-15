@@ -8,24 +8,24 @@ Rui Sarmento – email@ruisarmento.com
 3. Install ODBC in OS with commands from 
 http://asteriskdocs.org/en/3rd_Edition/asterisk-book-html-chunk/installing_configuring_odbc.html
 4. Create ODBC connection to MySQL database in file odbc.ini 
-a. Edit “Database”, “UserName” and “Password” to be drupal’s chosen database name, db admin username and db admin password
+- Edit “Database”, “UserName” and “Password” to be drupal’s chosen database name, db admin username and db admin password
 5. Install R
-a. Run R with command “R” in OS console
-b. Install package “recommenderlab” in R console with command “install.packages("recommenderlab")”
-c. Install package “e1071” in R console with command “install.packages("e1071")”
-d. Install package “RODBC” in R console with command install.packages("RODBC")”
-e. Copy recommender_paper.R to root folder in server
+- Run R with command “R” in OS console
+- Install package “recommenderlab” in R console with command “install.packages("recommenderlab")”
+- Install package “e1071” in R console with command “install.packages("e1071")”
+- Install package “RODBC” in R console with command install.packages("RODBC")”
+- Copy recommender_paper.R to root folder in server
 6. In Drupal:
-a. Create Taxonomy Vocabulary with the category terms
-b. Create field in product/services pages for the ratings
-c. Make rule so that rating field be only accessible if the user A made exchange of products/services with user B
-d.  Create mandatory category list field in product/service page so the proposing user can categorize his products/services
-e. With Data module adopt table “recommender” from db (after running the R script in 5.e.) 
-f. Create views block in user pages or other with the top5 or top10 recommended products/services for the user
-f.i. This view uses “recommender” table
-f.ii. The column “rownames” in the previous table has the users ids
-f.iii. The other columns names correspond to the service/products ids 
-f.iv. The values for recommendation are from 0 to 100
+- Create Taxonomy Vocabulary with the category terms
+- Create field in product/services pages for the ratings
+- Make rule so that rating field be only accessible if the user A made exchange of products/services with user B
+- Create mandatory category list field in product/service page so the proposing user can categorize his products/services
+- With Data module adopt table “recommender” from db (after running the R script in 5.e.) 
+- Create views block in user pages or other with the top5 or top10 recommended products/services for the user
+    .This view uses “recommender” table
+    .The column “rownames” in the previous table has the users ids
+    .The other columns names correspond to the service/products ids 
+    .The values for recommendation are from 0 to 100
 
 
 IMPORTANT NOTES: 
