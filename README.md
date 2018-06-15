@@ -21,10 +21,14 @@ http://asteriskdocs.org/en/3rd_Edition/asterisk-book-html-chunk/installing_confi
 - Make rule so that rating field be only accessible if the user A made exchange of products/services with user B
 - Create mandatory category list field in product/service page so the proposing user can categorize his products/services
 - With Data module adopt table “recommender” from db (after running the R script in 5.e.) 
-- Create views block in user pages or other with the top5 or top10 recommended products/services for the user
+- Create views block in user pages or other with the top5 or top10 recommended products/services for the user:
+    
     1 - This view uses “recommender” table
+    
     2 - The column “rownames” in the previous table has the users ids
+    
     3 - The other columns names correspond to the service/products ids 
+    
     4 - The values for recommendation are from 0 to 100
 
 
